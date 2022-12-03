@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>A.codeforces</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.d6ad21ed.css" as="style"><link rel="preload" href="/assets/js/app.938cf238.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/8.46b0719c.js" as="script"><link rel="prefetch" href="/assets/js/3.2d654790.js"><link rel="prefetch" href="/assets/js/4.94733d25.js"><link rel="prefetch" href="/assets/js/5.2ea06e07.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.d976330f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d6ad21ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="a-codeforces"><a href="#a-codeforces" class="header-anchor">#</a> A.codeforces</h1> <p>直接读入输入即可</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;bits/stdc++.h&gt;
+int main()
+{
+    string s;
+    cin&gt;&gt;s;
+    cout&lt;&lt;&quot;https://codeforces.com/profile/&quot;&lt;&lt;s;
+    return 0;
+}
+</code></pre></div><h1 id="b-小美挑糖果"><a href="#b-小美挑糖果" class="header-anchor">#</a> B.小美挑糖果</h1> <p>对给定的所有糖果按数量进行排序，然后取最大的前$k$袋糖果。注意数据范围较大，需要$long\ long$</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;bits/stdc++.h&gt;
+int main()
+{
+    int n,k;
+    cin&gt;&gt;n&gt;&gt;k;
+    ll ans=0;
+    for(int i=1;i&lt;=n;i++)
+        cin&gt;&gt;a[i];
+    sort(a+1,a+1+n);
+    for(int i=n;k;i--,k--)
+        ans+=a[i];
+    cout&lt;&lt;ans&lt;&lt;endl;
+    return 0;
+}
+</code></pre></div><h1 id="c-你好-acm"><a href="#c-你好-acm" class="header-anchor">#</a> c.你好 ACM!</h1> <p>直接输出即可，但是需要注意反斜杠需要进行转义，例如</p> <div class="language-c++ extra-class"><pre class="language-text"><code>printf(&quot;\\&quot;);
+</code></pre></div><p>输出为：
+<img src="https://img2023.cnblogs.com/blog/3005283/202212/3005283-20221203195228748-790885879.png" alt="img"></p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    cout &lt;&lt; &quot; _    _          _   _                         _____   __  __   _&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;| |  | |        | | | |               /\\      / ____| |  \\/  | | |&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;| |__| |   ___  | | | |   ___        /  \\    | |      | \\  / | | |&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;|  __  |  / _ \\ | | | |  / _ \\      / /\\ \\   | |      | |\\/| | | |&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;| |  | | |  __/ | | | | | (_) |    / ____ \\  | |____  | |  | | |_|&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;|_|  |_|  \\___| |_| |_|  \\___/    /_/    \\_\\  \\_____| |_|  |_| (_)&quot; &lt;&lt; endl;
+    return 0;
+}
+</code></pre></div><h1 id="d-奇怪的数列"><a href="#d-奇怪的数列" class="header-anchor">#</a> D 奇怪的数列</h1> <p>平方和求和公式
+$\sum_{i=1}^{n}i^{2}=\frac{n(n+1)(2n+1)}{6}$</p> <p>证明：
+$i^{2}=i(i-1)+i$</p> <p>$\sum_{i=1}^{n}i^{2}=\sum_{i=1}^{n}C_{i}^{1}+2<em>C_{i}^{2}=2</em>C_{n+1}^{3}+C_{n+1}^{2}=\frac{n(n+1)(2n+1)}{6}$</p> <p>直接套公式即可，注意数据范围很大，需要开$long\ long$。</p> <p>对于取模操作，$\frac{a}{b}mod\ N\ne \frac{a\ mod\ N}{b\ mod\ N}$。</p> <p>但是如果变成乘法，$a*\frac{1}{b}\ mod\ N=\frac{a}{b}mod\ N$。</p> <p>所以我们需要求$\frac{1}{6}$，即6的<a href="https://oi-wiki.org/math/number-theory/inverse/" target="_blank" rel="noopener noreferrer">逆元<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>求逆元一定要满足$a$与$mod$互质。题目给出的模数$10^{9}+7$是质数，所以一定满足互质的条件。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int mod=1e9+7;
+long long qmi(long long a, long long b, long long mod)//快速幂求6的逆元
+{
+    long long res = 1;
+    while (b)
+    {
+        if (b &amp; 1)
+            res = res * a % mod;
+        a = a * a % mod;
+        b &gt;&gt;= 1;
+    }
+    return res;
+}
+int main()
+{
+    long long n;
+    cin&gt;&gt;n;
+    cout&lt;&lt;((n%mod)*((n+1)%mod))%mod*(2*n%mod+1)%mod*qmi(6,mod-2,mod)%mod;
+    return 0;
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.938cf238.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/8.46b0719c.js" defer></script>
+  </body>
+</html>
